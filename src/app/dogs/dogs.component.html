@@ -1,0 +1,10 @@
+<app-nav-bar></app-nav-bar>
+<app-header-background [imgSrc]="'/assets/imgs/dogs/header3.jpg'"> </app-header-background>
+<div class="cat" *ngFor="let dog of dogs">
+    <p> {{dog.name}}</p>
+    <p> {{dog.age}}</p>
+    <p> {{dog.breed}}</p>
+    <p> {{dog.gender}}</p>
+    <p> {{dog.vaccinated}}</p>
+    <img src={{dog.img}}>
+</div>

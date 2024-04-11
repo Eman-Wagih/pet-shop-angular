@@ -1,0 +1,32 @@
+
+.nav-links ul{
+    list-style-type: none;
+    /* background-color: peru; */
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 15;
+}
+.nav-links a{
+    color: rgb(120, 71, 23);
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    z-index: 15;
+    
+}
+.nav-links a:hover{
+    border-bottom: rgb(120, 71, 23);
+    font-weight:600;  
+}
+
+.log-out {
+    border: 1px solid rgb(120, 71, 23);
+    border-radius: 40%;
+    background-color: rgb(120, 71, 23);
+    color: white !important;
+}

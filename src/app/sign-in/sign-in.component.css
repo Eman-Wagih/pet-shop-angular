@@ -1,0 +1,33 @@
+.entro {
+    background:linear-gradient(#c3792443, #e2a4a214), url('/assets/imgs/bg/sign.jpg') center / cover no-repeat;
+    min-height: 100vh;
+    min-width: 90vw;
+}
+
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    min-height: 500px;
+    background-color: wheat;
+    border-radius: 20px;
+}
+
+.authForm {
+    display: inline-flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: peru;
+    cursor: pointer;
+    text-decoration: none;
+} 

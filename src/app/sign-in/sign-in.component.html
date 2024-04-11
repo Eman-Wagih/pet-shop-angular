@@ -1,0 +1,23 @@
+<div class="entro"> 
+  <div class="formContainer">
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="authForm">
+        <label for="userName">Please enter your name </label>
+        <input type="text" id="userName" class="input-text"  formControlName="userName" autocomplete="off" required>
+        <p class="error" *ngIf="signInForm.get('userName')?.invalid &&
+         signInForm.get('userName')?.dirty ||
+         signInForm.get('userName')?.touched">
+         {{errorInput}}
+        </p>        
+        <label for="passWord">Please enter your password </label>
+        <input type="password" id="passWord" class="input-text" formControlName="passWord" autocomplete="off" required> 
+        <p class="error" *ngIf="signInForm.get('passWord')?.invalid &&
+        signInForm.get('passWord')?.dirty ||
+        signInForm.get('passWord')?.touched">
+        {{errorInput}}
+       </p> 
+        <button type="submit" class="log-in button">Log In</button>
+        <p class="error">  {{errorInSing}} </p>
+        <a routerLink="/sign-up" class="link button" style="text-decoration: none;">Sign Up</a> 
+    </form>
+  </div>
+</div>

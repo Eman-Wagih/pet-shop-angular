@@ -1,0 +1,15 @@
+<div class="cat">
+
+    <input [(ngModel)]="cat.name" placeholder="edit cat name">
+    <p> {{cat.name}}</p>
+    <input [(ngModel)]="cat.age" placeholder="edit cat age">
+    <p> {{cat.age}}</p>
+    <input [(ngModel)]="cat.breed" placeholder="edit cat breed">
+    <p> {{cat.breed}}</p>
+    <input [(ngModel)]="cat.gender" placeholder="edit cat gender">
+    <p> {{cat.gender}}</p>
+    <input [(ngModel)]="cat.vaccinated" placeholder="edit cat vaccinated">
+    <p> {{cat.vaccinated}}</p>
+    <img src={{cat.img}}> 
+    <button type="button" (click)="saveChanges(cat)"> save changes </button>
+</div>
