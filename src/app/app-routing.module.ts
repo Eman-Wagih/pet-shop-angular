@@ -3,10 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatsComponent } from './cats/cats.component';
 import { DogsComponent } from './dogs/dogs.component';
 import { AdoptionComponent } from './adoption/adoption.component';
-import { ShopComponent } from './shop/shop.component';
+import { ShopComponent } from './shopping/shop.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { EditCatComponent } from './edit-cat/edit-cat.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path: 'cats', component: CatsComponent, title: 'adopt a cat'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'shop', component: ShopComponent, title: 'shop'}, 
   {path: 'sign-in', component: SignInComponent, title: 'sign in'},
   {path: 'sign-up', component: SignUpComponent, title: 'sign up'},
+  {path: 'cart', component: CartComponent, title: 'your cart'},
   {path: '', component: CatsComponent}
 ];
 

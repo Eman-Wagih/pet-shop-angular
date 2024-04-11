@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+
+<app-cart [product]="cartProduct" routerLink="/cart"> 
+    <div class="cart" >
+        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>
+    </div>
+    
+</app-cart>
+  <div class="products" *ngFor="let product of products">
+  <p>{{ product.productType }}</p>
+  <p>{{ product.price * (quantity[product.id]) || product.price }}</p>
+  <img [src]="product.img" height="300px" width="300px">
+
+  <button (click)="inCart(product)" class="button">add to cart</button>
+  <button class="increase" (click)="increase(product)">+</button>
+  <span>{{ quantity[product.id] || 0 }}</span>
+  <button class="decrease" (click)="decrease(product)" [disabled]="isDisabled(product)">-</button>
+</div>

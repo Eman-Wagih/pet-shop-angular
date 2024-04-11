@@ -19,7 +19,7 @@
       "img": "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=900"
     },
     {
-      "name": "youssef",
+      "name": "youssefa",
       "age": "7 months",
       "breed": "Balady",
       "gender": "male",
@@ -28,22 +28,23 @@
       "id": "4"
     },
     {
-      "name": "youssef",
-      "age": "7 months",
-      "breed": "Balady",
-      "gender": "male",
-      "vaccinated": "no",
-      "img": "https://qatawat.com/wp-content/uploads/2021/05/%D9%82%D8%B7-%D8%A7%D9%84%D9%85%D8%A7%D9%88-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A.jpg",
-      "id": "5"
-    },
-    {
-      "id": 6,
+      "id": "6",
       "animalType": "Cat",
       "name": "falak",
       "age": "mm",
       "breed": "balady",
       "vaccinated": "no",
       "gender": "male",
+      "img": "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=900"
+    },
+    {
+      "id": "7",
+      "animalType": "Cat",
+      "name": "sayeda",
+      "age": "8",
+      "breed": "balady",
+      "vaccinated": "no",
+      "gender": "female",
       "img": "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=900"
     }
   ],
@@ -140,7 +141,7 @@
       "img": "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=900"
     },
     {
-      "id": 7,
+      "id": "7",
       "animalType": "Dog",
       "name": "falak",
       "age": "8",
@@ -150,5 +151,47 @@
       "img": "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=900"
     }
   ],
-  "user": []
+  "user": [
+    {
+      "id": "fd61",
+      "userName": "Eman",
+      "passWord": "12345",
+      "passWordCheck": "12345"
+    },
+    {
+      "id": "d3cd",
+      "userName": "Eman",
+      "passWord": "12345",
+      "passWordCheck": "12345"
+    },
+    {
+      "id": "18d6",
+      "userName": "Eman",
+      "passWord": "12345",
+      "passWordCheck": "12345"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "productType": "Dry food for dogs",
+      "price": 150,
+      "img": "./assets/imgs/products/1.jpg",
+      "inCart": false
+    },
+    {
+      "id": "2",
+      "productType": "Dry food for cats",
+      "price": 150,
+      "img": "/assets/imgs/products/2.jpg",
+      "inCart": false
+    },
+    {
+      "id": "3",
+      "productType": "Wet food",
+      "price": 100,
+      "img": "/assets/imgs/products/3.png",
+      "inCart": false
+    }
+  ]
 }

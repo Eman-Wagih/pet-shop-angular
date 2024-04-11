@@ -9,6 +9,6 @@
     <p> {{cat.gender}}</p>
     <p> {{cat.vaccinated}}</p>
     <img src={{cat.img}}>
-    <button type="button" (click)="deleteTheCat(cat)"> delete cat </button>
-    <button class="btn"> <a [routerLink]="[cat.id]"> edit cat details </a></button>
+    <button  class="button" (click)="deleteTheCat(cat)"> delete cat </button>
+    <button class="button"> <a [routerLink]="[cat.id]"> edit cat details </a></button>
 </div>
