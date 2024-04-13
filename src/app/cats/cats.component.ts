@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Animal } from '../animal';
 import { AnimalDataService } from '../animal-data.service';
 
@@ -28,6 +28,10 @@ export class CatsComponent implements OnInit {
     });
 }
 
+
+
+
 }
+
 
 
