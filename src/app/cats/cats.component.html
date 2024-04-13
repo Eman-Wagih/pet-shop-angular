@@ -2,13 +2,17 @@
 <app-header-background [imgSrc]="'/assets/imgs/cats/header.jpg'"> </app-header-background>
 <app-search (searchResualt)="filterBySearch($event)"> </app-search>
 
-<div class="cat" *ngFor="let cat of cats">
+
+<div class="parent"> 
+<div class="animal" *ngFor="let cat of cats">
+    <img src={{cat.img}} class="animal-img" >
     <p> {{cat.name}}</p>
     <p> {{cat.age}}</p>
     <p> {{cat.breed}}</p>
     <p> {{cat.gender}}</p>
     <p> {{cat.vaccinated}}</p>
-    <img src={{cat.img}}>
-    <button  class="button" (click)="deleteTheCat(cat)"> delete cat </button>
-    <button class="button"> <a [routerLink]="[cat.id]"> edit cat details </a></button>
+        <button  class="button action-button" (click)="deleteTheCat(cat)"> delete  </button>
+        <button class="button action-button"> <a [routerLink]="[cat.id]"> edit  </a></button>
+   
+</div>
 </div>

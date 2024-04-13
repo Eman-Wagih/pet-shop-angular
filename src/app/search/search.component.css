@@ -1,0 +1,11 @@
+.search {
+    position: absolute;
+    margin-top: 10px;
+    left: calc(50% - 350px);
+    width: 350px;
+    border: none;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid peru;
+}

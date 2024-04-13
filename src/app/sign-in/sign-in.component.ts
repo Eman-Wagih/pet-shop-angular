@@ -33,7 +33,7 @@ export class SignInComponent implements OnInit {
          const matchingUser = users.find(user => user.userName === this.signInForm.get('userName')?.value
         && user.passWord === this.signInForm.get('passWord')?.value
         );
-       if (matchingUser) {
+       if (matchingUser && this.signInForm.valid) {
          this.router.navigate(['/cats']);
        } else {
         this.errorInSing = 'Invalid username or password';

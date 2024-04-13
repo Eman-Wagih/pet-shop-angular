@@ -1,7 +1,6 @@
-<div class="over-lay"></div>
 <div class="entro"> 
-    <div class="bg-color"></div>
-    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm.value)">
+    <div class="formContainer">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm.value)" class="authForm">
         <label for="userName">Please enter your name </label>
         <input type="text" id="userName" class="input-text"  formControlName="userName" autocomplete="off" required>
         <p class="error" *ngIf="signUpForm.get('userName')?.hasError('required') &&
@@ -24,6 +23,7 @@
         {{errorInput}}
        </p>
         <button type="submit" class="log-in button">Log In</button>
-        <a href="/signup" class="link button" style="text-decoration: none;">Sign Up</a> 
+        <a routerLink="/sign-in" class="link button" style="text-decoration: none;">Sign Up</a> 
     </form>
+ </div>
 </div>

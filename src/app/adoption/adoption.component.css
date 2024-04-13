@@ -1,0 +1,36 @@
+.adoption-form {
+    position: absolute;
+    left: 42%;
+    text-align: center
+}
+
+.adoption-form p {
+    font-weight: 700;
+}
+
+.adoption-form input {
+    border-radius: 15px;
+    border: 1px solid peru;
+}
+
+.input-text {
+    width: 260px;
+    height: 25px;
+}
+
+.submit-btn
+    {
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: peru;
+        cursor: pointer;
+        display: block;
+        margin-top: 15px;
+        width: 200px;
+    }
+
+.submit-btn:hover {
+    background-color: rgb(120, 71, 23);
+    transform: scale(1.1);
+}
