@@ -4,22 +4,19 @@
         <label for="userName">Please enter your name </label>
         <input type="text" id="userName" class="input-text"  formControlName="userName" autocomplete="off" required>
         <p class="error" *ngIf="signUpForm.get('userName')?.hasError('required') &&
-         signUpForm.get('userName')?.dirty ||
-        signUpForm.get('userName')?.touched">
+        signUpForm.get('userName')?.touched || signUpForm.get('userName')?.value < 0">
          {{errorInput}}
         </p>        
         <label for="passWord">Please enter your password </label>
         <input type="password" id="passWord" class="input-text" formControlName="passWord" autocomplete="off" > 
         <p class="error" *ngIf="signUpForm.get('passWord')?.invalid &&
-        signUpForm.get('passWord')?.dirty ||
-       signUpForm.get('passWord')?.touched">
+        signUpForm.get('passWord')?.touched || signUpForm.get('passWord')?.value < 0">
         {{errorInput}}
        </p> 
        <label for="passWordCheck">Please enter your password </label>
         <input type="password" id="passWordCheck" class="input-text" formControlName="passWordCheck" autocomplete="off" required> 
         <p class="error" *ngIf="signUpForm.get('passWordCheck')?.invalid &&
-        signUpForm.get('passWordCheck')?.dirty ||
-        signUpForm.get('passWordCheck')?.touched">
+        signUpForm.get('passWordCheck')?.touched  || signUpForm.get('passWordCheck')?.value < 0">
         {{errorInput}}
        </p>
         <button type="submit" class="log-in button">Log In</button>

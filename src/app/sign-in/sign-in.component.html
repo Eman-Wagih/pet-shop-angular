@@ -5,15 +5,13 @@
         <label for="userName">Please enter your name </label>
         <input type="text" id="userName" class="input-text"  formControlName="userName" autocomplete="off" required>
         <p class="error" *ngIf="signInForm.get('userName')?.invalid &&
-         signInForm.get('userName')?.dirty ||
-         signInForm.get('userName')?.touched">
+         signInForm.get('userName')?.touched || signInForm.get('userName')?.value < 0">
          {{errorInput}}
         </p>        
         <label for="passWord">Please enter your password </label>
         <input type="password" id="passWord" class="input-text" formControlName="passWord" autocomplete="off" required> 
         <p class="error" *ngIf="signInForm.get('passWord')?.invalid &&
-        signInForm.get('passWord')?.dirty ||
-        signInForm.get('passWord')?.touched">
+        signInForm.get('passWord')?.touched || signInForm.get('passWord')?.value < 0">
         {{errorInput}}
        </p> 
         <button type="submit" class="log-in button">Log In</button>
