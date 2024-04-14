@@ -26,13 +26,21 @@ addCat(cat: Animal) {
   return this.http.post<Animal>(`${this.apiUrl}/cats`, cat, httpOptions);
  }
 
+
+ addDog(dog: Animal) {
+  return this.http.post<Animal>(`${this.apiUrl}/dogs`, dog, httpOptions);
+ }
+
+ 
  editCat(cat: Animal) {
   return this.http.put<Animal>(`${this.apiUrl}/cats/${cat.id}`, cat, httpOptions);
 
  }
 
- addDog(dog: Animal) {
-  return this.http.post<Animal>(`${this.apiUrl}/dogs`, dog, httpOptions);
+ 
+ editDog(dog: Animal) {
+  return this.http.put<Animal>(`${this.apiUrl}/dogs/${dog.id}`, dog, httpOptions);
+
  }
 
  deleteCat(catId: number): Observable<void> {
@@ -40,7 +48,16 @@ addCat(cat: Animal) {
   return this.http.delete<void>(url);
 }
 
+deleteDog(dogId: number): Observable<void> {
+  const url = `${this.apiUrl}/dogs/${dogId}`; 
+  return this.http.delete<void>(url);
+}
+
 editCatDetails (catId :Animal) {
   return this.http.post<Animal>(`${this.apiUrl}/cats/${catId}`, catId, httpOptions);
+}
+
+editDogDetails (dogId :Animal) {
+  return this.http.post<Animal>(`${this.apiUrl}/dogs/${dogId}`, dogId, httpOptions);
 }
 }

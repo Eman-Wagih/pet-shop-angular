@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { AnimalDataService } from '../animal-data.service';
 import { Animal } from '../animal';
 
@@ -19,10 +19,9 @@ export class EditCatComponent implements OnInit {
   };
   id!: number; 
 
-  @Output() editCat = new EventEmitter<Animal>();
-
   constructor(private route: ActivatedRoute,
-              private animalData: AnimalDataService
+              private animalData: AnimalDataService,
+              private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +38,8 @@ export class EditCatComponent implements OnInit {
 
   }
   saveChanges(cat:Animal) {
-    this.animalData.editCat(cat).subscribe()
+    this.animalData.editCat(cat).subscribe();
+    this.router.navigate(['/cats'])
   }
 
 }

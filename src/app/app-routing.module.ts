@@ -8,11 +8,14 @@ import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { EditCatComponent } from './edit-cat/edit-cat.component';
 import { CartComponent } from './shopping/cart/cart.component';
+import { EditDogComponent } from './edit-dog/edit-dog.component';
 
 const routes: Routes = [
   {path: 'cats', component: CatsComponent, title: 'adopt a cat'},
   {path: 'cats/:id', component: EditCatComponent, title: 'edit cat details'},
-  {path: 'dogs', component: DogsComponent, title: 'adopt a dog'}, 
+  {path: 'dogs', component: DogsComponent, title: 'adopt a dog'},
+  {path: 'dogs/:id', component: EditDogComponent, title: 'edit dog details'}, 
+ 
   {path: 'adoption', component: AdoptionComponent, title: 'adopt a pet'},
   {path: 'shop', component: ShopComponent, title: 'shop'}, 
   {path: 'sign-in', component: SignInComponent, title: 'sign in'},

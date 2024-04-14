@@ -1,10 +1,17 @@
 <app-nav-bar></app-nav-bar>
 <app-header-background [imgSrc]="'/assets/imgs/dogs/header3.jpg'"> </app-header-background>
-<div class="cat" *ngFor="let dog of dogs">
+<app-search (searchResualt)="filterBySearch($event)"> </app-search>
+
+
+<div class="parent"> 
+<div class="animal" *ngFor="let dog of dogs">
+    <img src={{dog.img}}  class="animal-img">
     <p> {{dog.name}}</p>
     <p> {{dog.age}}</p>
     <p> {{dog.breed}}</p>
     <p> {{dog.gender}}</p>
     <p> {{dog.vaccinated}}</p>
-    <img src={{dog.img}}>
+    <button  class="button action-button" (click)="deleteTheDog(dog)"> delete  </button>
+        <button class="button action-button"> <a [routerLink]="[dog.id]"> edit  </a></button>
+</div>
 </div>

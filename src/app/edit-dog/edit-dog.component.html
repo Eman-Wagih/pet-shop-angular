@@ -1,1 +1,17 @@
-<p>edit-dog works!</p>
+<div class="edit">
+
+    <input [(ngModel)]="dog.name" placeholder="edit cat name">
+    <p> {{dog.name}}</p>
+    <input [(ngModel)]="dog.age" placeholder="edit cat age">
+    <p> {{dog.age}}</p>
+    <input [(ngModel)]="dog.breed" placeholder="edit cat breed">
+    <p> {{dog.breed}}</p>
+    <input [(ngModel)]="dog.gender" placeholder="edit cat gender">
+    <p> {{dog.gender}}</p>
+    <input [(ngModel)]="dog.vaccinated" placeholder="edit cat vaccinated">
+    <p> {{dog.vaccinated}}</p>
+    <div class="img"> 
+    <img src={{dog.img}} > 
+</div>
+    <button type="button" class="button" (click)="saveChanges(dog)"> save changes </button>
+</div>

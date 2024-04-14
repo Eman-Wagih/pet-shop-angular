@@ -26,7 +26,8 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(user: User) {
-    if (this.signUpForm.get('passWord')?.value === this.signUpForm.get('passWordCheck')?.value) {
+    if (this.signUpForm.get('passWord')?.value === this.signUpForm.get('passWordCheck')?.value &&
+     this.signUpForm.get('passWord')?.value < 0 ) {
       this.user = this.signUpForm.value;
       this.auth.addUser(user).subscribe()
     }

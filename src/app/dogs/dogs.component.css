@@ -1,0 +1,37 @@
+.animal-img {
+    width: 200px;
+    height: 214px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.action-button a {
+    text-decoration: none;
+}
+ 
+.action-button {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.parent { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 40px;
+    row-gap: 35px;
+    margin-bottom: 15px;
+}
+
+.parent .animal {
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 1px -1px 4px -1px peru;
+}
+
+.animal:hover {
+    transform: scale(1.1);
+}
